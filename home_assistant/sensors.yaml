@@ -1,0 +1,35 @@
+# ===============================
+# ParkPi Parking Asssistant
+# ===============================
+  # Last Updated
+  - platform: mqtt
+    name: "Parking Last Update"
+    state_topic: "parkpi/parking/lastupdate"
+    value_template: "{{ (as_timestamp(now()) | int) | timestamp_custom('%I:%M %p') }}"
+  # Parking Distance
+  - platform: mqtt
+    name: "Parking Distance"
+    state_topic: "parkpi/parking/frontdist"
+    value_template: "{{ (value | float / 25.4 ) | round(1)}}"
+    unit_of_measurement: '"'
+    icon: mdi:arrow-expand-horizontal
+  # Parking Status (OK / Err)
+  - platform: mqtt
+    name: "Parking Status"
+    state_topic: "parkpi/parking/status"
+  # Parking Car Presence (car/nocar)
+  - platform: mqtt
+    name: "Parking Car Presence"
+    state_topic: "parkpi/parking/cardetect"
+    value_template: >-
+      {% if value == 'car' %}
+        Detected
+      {% else %}
+        Not Detected
+      {% endif %}
+    icon: mdi:car
+  # Parking Power State
+  - platform: mqtt
+    name: "Parking Power State"
+    state_topic: "parkpi/parking/powerstate"
+    icon: mdi:current-dc
