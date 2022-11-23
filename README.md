@@ -9,5 +9,7 @@ This project is heavily based on the original Instructables project by medinc [P
 
 Please see the my blog [Parking Assistant with MQTT and Vehicle Presence Sensors](https://resinchemtech.blogspot.com/2021/07/parking-assistant-with-mqtt-and-vehicle.html) for parts list, wiring and assembly for this version.
 
+If you are looking for the ESP8266/WS2812b version, you can find that in [this repository](https://github.com/Resinchem/ESP-Parking-Assistant).
+
 >*If you found this project helpful, would like to say thanks or help support future development:*<br>
 >[![buy_me_a_coffee_sm](https://user-images.githubusercontent.com/55962781/159586675-7476e996-a990-4918-8825-aa6812f3ea28.jpg)](https://www.buymeacoffee.com/resinchemtech)
